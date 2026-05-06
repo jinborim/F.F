@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c70062c043d73d8409614eb99603d739, type: 3}
+  m_Name: PurpleGun
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 4742213467116195756, guid: 33a4d2f2b78a3cd45b14220e4d6b0e3d, type: 3}
+  BulletImage: {fileID: 21300000, guid: c7e151f8a3fc7d74db1db51e45405b37, type: 3}
+  gun_Type: 3

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22fec9955e234714ab7be4a520d1ce8f, type: 3}
+  m_Name: RedGun_Item
+  m_EditorClassIdentifier: 
+  itemName: EquipmentTest2
+  itemType: 0
+  itemImage: {fileID: 5469306851782731028, guid: eeac123894a68534590c3197728fced1, type: 3}
+  itemPrefab: {fileID: 5801129171004350498, guid: 908862d6b08fa06438af7e1375791bad, type: 3}
+  weaponType: RedGun
