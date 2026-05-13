@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI; // UI 관련 스크립트에 활용
+using UnityEngine.UI; 
 using UnityEngine.SceneManagement;
 public class PlayergoOut : MonoBehaviour
 {
