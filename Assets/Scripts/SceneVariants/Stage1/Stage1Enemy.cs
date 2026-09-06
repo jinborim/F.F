@@ -38,7 +38,7 @@ public class Stage1Enemy : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // 특정 endpoint와 충돌시 방향 전환
         if (collision.gameObject.CompareTag("endpoint"))
