@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TopDragSlot : MonoBehaviour
 {
+
     static public TopDragSlot instance;
     public TopSlot dragSlot;
 

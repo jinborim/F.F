@@ -9,13 +9,12 @@ public class spike_Script : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //Ä³¸¯ÅÍ´Â ±âº»ÀûÀ¸·Î isTrigger°¡ È°¼ºÈ­µÇ¾îÀÖÁö ¾Ê±â¶§¹®¿¡ ÀÌ ÇÔ¼ö¸¦ »ç¿ëÇÑ´Ù.
+        //ìºë¦­í„°ëŠ” ê¸°ë³¸ì ìœ¼ë¡œ isTriggerê°€ í™œì„±í™”ë˜ì–´ìˆì§€ ì•Šê¸°ë•Œë¬¸ì— ì´ í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•œë‹¤.
         if (collision.gameObject.CompareTag("Character"))
         {
             if (character.is_Beat == false)
             {
                 hp_manger.Damaged(10);
-                //StartCoroutine(character.OnBeatTime());
 
             }
 
@@ -30,7 +29,6 @@ public class spike_Script : MonoBehaviour
             if (character.is_Beat == false)
             {
                 hp_manger.Damaged(10);
-                //StartCoroutine(character.OnBeatTime());
 
             }
 

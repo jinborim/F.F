@@ -24,9 +24,8 @@ public class Loading_Text : MonoBehaviour
 
     IEnumerator Typing(string dialogue)
     {
-        //ÀÌ ÇÔ¼ö°¡ ½ÃÀÛÇÒ ¶§ ÇÑ ¹ø ³»¿ë¹°À» ½Ï ºñ¿öÁØ´Ù(¾È±×·¯¸é ÀüÀÇ ´ë»ç¿¡ Ãß°¡ÇØ¼­ ³ª¿È)
-        //À§ÀÇ Typing_trigger¿¡¼­ dialogue¸¦ °¡Á®¿Í¼­ talk¶ó´Â Áö¿ªº¯¼ö?·Î »ç¿ë
-
+        //ì´ í•¨ìˆ˜ê°€ ì‹œì‘í•  ë•Œ í•œ ë²ˆ ë‚´ìš©ë¬¼ì„ ì‹¹ ë¹„ì›Œì¤€ë‹¤(ì•ˆê·¸ëŸ¬ë©´ ì „ì˜ ëŒ€ì‚¬ì— ì¶”ê°€í•´ì„œ ë‚˜ì˜´)
+        //ìœ„ì˜ Typing_triggerì—ì„œ dialogueë¥¼ ê°€ì ¸ì™€ì„œ talkë¼ëŠ” ì§€ì—­ë³€ìˆ˜?ë¡œ ì‚¬ìš©
         do
         {
             //dialog_context.text = null;
@@ -39,7 +38,7 @@ public class Loading_Text : MonoBehaviour
                 for (int j = 0; j < talk.Length; j++)
                 {
                     dialog_context.text += talk[j];
-                    yield return new WaitForSeconds(0.2f); //ÄÚ·¯Æ¾ ÇÔ¼ö¿¡¼­ »ç¿ëÇÏ´Â ÇÔ¼ö·Î, ÁöÁ¤µÈ ½Ã°£¿¡ ÇÑ¹ø¾¿ µ¹¾Æ°¡°Ô µÊ > ±ÛÀÚ Ãâ·Â ¼Óµµ¶û °°´Ù°í º¼ ¼ö ÀÖÀ½
+                    yield return new WaitForSeconds(0.2f); //ì½”ëŸ¬í‹´ í•¨ìˆ˜ì—ì„œ ì‚¬ìš©í•˜ëŠ” í•¨ìˆ˜ë¡œ, ì§€ì •ëœ ì‹œê°„ì— í•œë²ˆì”© ëŒì•„ê°€ê²Œ ë¨ > ê¸€ì ì¶œë ¥ ì†ë„ë‘ ê°™ë‹¤ê³  ë³¼ ìˆ˜ ìˆìŒ
                 }
                 yield return new WaitForSeconds(0.3f);
             }

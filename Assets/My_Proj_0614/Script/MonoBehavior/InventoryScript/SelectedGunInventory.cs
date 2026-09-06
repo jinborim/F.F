@@ -7,7 +7,7 @@ public class SelectedGunInventory : MonoBehaviour
 {
     [SerializeField]
     public GameObject gun_SlotsParent;
-    // ¤¤ ½½·ÔÀ» ´ã´Â °¡Àå ¹è°æ ÀÌ¹ÌÁö
+    // ã„´ ìŠ¬ë¡¯ì„ ë‹´ëŠ” ê°€ì¥ ë°°ê²½ ì´ë¯¸ì§€
     [SerializeField]
     private GunSlot[] gun_slot;
     private GunType_selected gun_;
@@ -65,7 +65,7 @@ public class SelectedGunInventory : MonoBehaviour
                 for (int k = 0; k < gun_slot.Length; k++)
                 {
                     gun_slot[k].activated_ = false;
-                    //Å°°¡ ´­¸± ¶§ ¸ğµç activated¸¦ ÇÑ¹ø ÃÊ±âÈ­ÇÏ±â
+                    //í‚¤ê°€ ëˆŒë¦´ ë•Œ ëª¨ë“  activatedë¥¼ í•œë²ˆ ì´ˆê¸°í™”í•˜ê¸°
                 }
 
                 for (int i = 0; i < gun_slot.Length; i++)
@@ -75,37 +75,23 @@ public class SelectedGunInventory : MonoBehaviour
                     {
                         
                         gun_slot[i].transform.Find("select_Activate").gameObject.SetActive(true);
-                        //bullet_change.bullet_changer_test(gun_slot[i].gun);this.transform.GetComponent<TopSlot>().gun
-                        //Debug.Log("ÇöÀç À§Ä¡ÀÇ ÃÑ: " + gun_slot[i].transform.GetComponent<GunSlot>().gun);
                         bullet_change.bullet_changer_test(gun_slot[i].transform.GetComponent<GunSlot>().gun);
-                        gun_slot[i].activated_ = true; //ÇöÀç ¼±ÅÃµÈ ½½·ÔÀÌ µå·¡±×µÇ°í ÀÖ´ÂÁö¸¦ È®ÀÎÇÒ°ÅÀÓ
-                        //Debug.Log("ÃÑ È°¼ºÈ­");
-                        //guninventory.gun_lib[i] = true;
-
-
+                        gun_slot[i].activated_ = true; //í˜„ì¬ ì„ íƒëœ ìŠ¬ë¡¯ì´ ë“œë˜ê·¸ë˜ê³  ìˆëŠ”ì§€ë¥¼ í™•ì¸í• ê±°ì„
+                        //Debug.Log("ì´ í™œì„±í™”");
                     }
                     else
                     {
                         gun_slot[i].transform.Find("select_Activate").gameObject.SetActive(false);
-                        //ÀÌ°Ô ½½·Ô ¼ö¸¸Å­ ¹«Á¶°Ç µ¹±â ¶§¹®¿¡ ¼±ÅÃµÇÁö ¾ÊÀº ½½·Ô±îÁö °Ë»öÇßÀ» ¶§ (¼±ÅÃ ¾ÈµÈ ½½·ÔÀº) ºñÈ°¼ºÈ­ µÇ°Ô ÇØÁà¾ßÇÔ.
-                        //Âü°í·Î ÀÌ°Ô ¾ø¾îµµ ÇÁ¸®ÆÕ º¯°æÀº Á¦´ë·Î µÇ±â ¶§¹®¿¡ ¼±ÅÃ ½½·Ô ½Ã°¢È­ ¹®Á¦ »©¸é Å« ¹®Á¦´Â ¾øÀ½..¤»
+                        //ì´ê²Œ ìŠ¬ë¡¯ ìˆ˜ë§Œí¼ ë¬´ì¡°ê±´ ëŒê¸° ë•Œë¬¸ì— ì„ íƒë˜ì§€ ì•Šì€ ìŠ¬ë¡¯ê¹Œì§€ ê²€ìƒ‰í–ˆì„ ë•Œ (ì„ íƒ ì•ˆëœ ìŠ¬ë¡¯ì€) ë¹„í™œì„±í™” ë˜ê²Œ í•´ì¤˜ì•¼í•¨.
+                        //ì°¸ê³ ë¡œ ì´ê²Œ ì—†ì–´ë„ í”„ë¦¬íŒ¹ ë³€ê²½ì€ ì œëŒ€ë¡œ ë˜ê¸° ë•Œë¬¸ì— ì„ íƒ ìŠ¬ë¡¯ ì‹œê°í™” ë¬¸ì œ ë¹¼ë©´ í° ë¬¸ì œëŠ” ì—†ìŒ
                     }
 
                     if (Input.GetKeyDown(key_selector.keyCodes[i]) && gun_slot[i].gun != true)
                     {
-                        //¸¸¾à ½½·Ô °¹¼ö¿Í ¸Â´Â ¼ıÀÚÅ°°¡ ´­·ÈÁö¸¸ ÇØ´ç ½½·ÔÀÌ È°¼ºÈ­µÇ¾îÀÖÁö ¾ÊÀ» ¶§
+                        //ë§Œì•½ ìŠ¬ë¡¯ ê°¯ìˆ˜ì™€ ë§ëŠ” ìˆ«ìí‚¤ê°€ ëˆŒë ¸ì§€ë§Œ í•´ë‹¹ ìŠ¬ë¡¯ì´ í™œì„±í™”ë˜ì–´ìˆì§€ ì•Šì„ ë•Œ
                         gun_slot[i].transform.Find("select_Activate").gameObject.SetActive(false);
                         bullet_change.bullet_changer_test(gun_slot[i].transform.GetComponent<GunSlot>().gun);
                         
-                        //Debug.Log("ÃÑ ºñÈ°¼ºÈ­");
-
-                        /*if (gun_slot.Length > i)
-                        {
-                            //guninventory.gun_lib[i] = false;
-                            //ÀÌ°Ç ¹®Á¦ »ı±â¸é i+1·Î ÇØºÁ¾ß ÇÒ µí
-                            //¼±ÅÃµÇÁö ¾ÊÀº Ã¢ÀÇ ÃÑÀº ºñÈ°¼ºÈ­ ÇÏ´Â ÄÚµåÀÓ..
-                        }*/
-
 
                     }
 
@@ -115,20 +101,20 @@ public class SelectedGunInventory : MonoBehaviour
             }
             else if ((Input.GetKeyDown(key_selector.keyCodes[j]) && j >= gun_slot.Length) == true)
             {
-                Debug.Log("¹Ù±ù ¼ıÀÚ Å°°¡ ´­¸²");
+                Debug.Log("ë°”ê¹¥ ìˆ«ì í‚¤ê°€ ëˆŒë¦¼");
                 for (int k = 0; k < gun_slot.Length; k++)
                 {
                     gun_slot[k].activated_ = false;
-                    //Å°°¡ ´­¸± ¶§ ¸ğµç activated¸¦ ÇÑ¹ø ÃÊ±âÈ­ÇÏ±â
+                    //í‚¤ê°€ ëˆŒë¦´ ë•Œ ëª¨ë“  activatedë¥¼ í•œë²ˆ ì´ˆê¸°í™”í•˜ê¸°
                 }
 
-                //´­¸° Å°°¡ ½½·Ô ¾ÈÀÇ ¼ıÀÚ°¡ ¾Æ´Ò ¶§
+                //ëˆŒë¦° í‚¤ê°€ ìŠ¬ë¡¯ ì•ˆì˜ ìˆ«ìê°€ ì•„ë‹ ë•Œ
                 for (int i = 0; i < gun_slot.Length; i++)
                 {
                     gun_slot[i].transform.Find("select_Activate").gameObject.SetActive(false);
                     bullet_change.bullet_changer_test(gun_slot[i].transform.GetComponent<GunSlot>().gun);
 
-                    //¸ğµç ½½·ÔÀÇ ÇÏÀ§ ¿ÀºêÁ§Æ®(event_on: È°¼ºÈ­ »óÅÂ¸¦ ³ªÅ¸³¾ Å×µÎ¸®)¸¦ ºñÈ°¼ºÈ­ ½ÃÅ²´Ù.
+                    //ëª¨ë“  ìŠ¬ë¡¯ì˜ í•˜ìœ„ ì˜¤ë¸Œì íŠ¸(event_on: í™œì„±í™” ìƒíƒœë¥¼ ë‚˜íƒ€ë‚¼ í…Œë‘ë¦¬)ë¥¼ ë¹„í™œì„±í™” ì‹œí‚¨ë‹¤.
                 }
 
             }

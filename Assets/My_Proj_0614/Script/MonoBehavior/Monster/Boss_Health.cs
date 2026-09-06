@@ -7,7 +7,6 @@ public class Boss_Health : MonoBehaviour
 {
     public float Full_Health = 150;
     public float Health = 150;
-    //원래 체력은 150
 
     public GameObject boss_health_parent;
     public Image healthBar;
@@ -46,15 +45,5 @@ public class Boss_Health : MonoBehaviour
         }
         healthBar.fillAmount = (Health / Full_Health);
         boss_.RestHealth = Health;
-        
-        
-    }
-
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

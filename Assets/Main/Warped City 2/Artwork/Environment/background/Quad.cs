@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Quad : MonoBehaviour
 {
+    private MeshRenderer render; 
 
-    private MeshRenderer render;
-
-    public float speed;
+    [SerializeField] private float speed;
     private float offset;
-    // Start is called before the first frame update
  
     void Start()
-    {
-        render = GetComponent<MeshRenderer>();
+    { 
+        render = GetComponent<MeshRenderer>(); 
     }
-
+    
     void Update()
     {
+        if (render == null) return;
+
         offset += Time.deltaTime * speed;
-        render.material.mainTextureOffset = new Vector2(offset, 0);
+        render.material.mainTextureOffset = new Vector2(offset, 0f); 
     }
 }

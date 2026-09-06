@@ -29,12 +29,12 @@ public class Autoshoot : MonoBehaviour
     {
         for(int i = 0; i<3; i++)
         {
-            //√—æÀ¿ª ∏∏µÁ¥Ÿ 
+            //√É√ë¬æ√ã√Ä¬ª ¬∏¬∏¬µ√ß¬¥√ô 
             /* var bulletGo = Instantiate<GameObject>(this.bulletPrefab);
             bulletGo.transform.position = this.bulletSpawnPoint.position; */
             GameObject BulletGo = Instantiate(bulletPrefab, this.transform.position, transform.rotation);
 
-            yield return new WaitForSeconds(0.6f);// + ¡∂∞«
+            yield return new WaitForSeconds(0.6f);// + √Å¬∂¬∞√á
         }
         gamemanager.Scene22(true);
         yield break;

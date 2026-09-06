@@ -44,7 +44,7 @@ public class Boss_Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Ä³¸¯ÅÍ´Â ±âº»ÀûÀ¸·Î isTrigger°¡ È°¼ºÈ­µÇ¾îÀÖÁö ¾Ê±â¶§¹®¿¡ ÀÌ ÇÔ¼ö¸¦ »ç¿ëÇÑ´Ù.
+        //ìºë¦­í„°ëŠ” ê¸°ë³¸ì ìœ¼ë¡œ isTriggerê°€ í™œì„±í™”ë˜ì–´ìˆì§€ ì•Šê¸°ë•Œë¬¸ì— ì´ í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•œë‹¤.
         if (collision.gameObject.CompareTag("Character"))
         {
             if (character.is_Beat == false)
@@ -171,12 +171,12 @@ public class Boss_Movement : MonoBehaviour
         switch (random_pattern)
         {
             case 0:
-                Debug.Log("¸ó½ºÅÍ ½ºÆù");
+                Debug.Log("ëª¬ìŠ¤í„° ìŠ¤í°");
                 int random_index_M = Random.Range(1, 6);
                 StartCoroutine(Monster_Spawner(random_index_M));
                 return;
             case 1 or 2:
-                Debug.Log("Åº¸·");
+                Debug.Log("íƒ„ë§‰");
                 int random_index_T = Random.Range(1, 10);
                 StartCoroutine(Shooting(random_index_T));
                 return;
@@ -208,7 +208,7 @@ public class Boss_Movement : MonoBehaviour
 
 
 
-    public IEnumerator Monster_Spawner(int count_)//¼ÒÈ¯ÇÒ ¸ó½ºÅÍ ¼ö¸¦ ÀÎÀÚ·Î ¹Ş±â
+    public IEnumerator Monster_Spawner(int count_)//ì†Œí™˜í•  ëª¬ìŠ¤í„° ìˆ˜ë¥¼ ì¸ìë¡œ ë°›ê¸°
     {
         if (Rest_count <= 0)
         {
@@ -232,7 +232,7 @@ public class Boss_Movement : MonoBehaviour
 
 
 
-    public IEnumerator Shooting(int count_)//³ªÁß¿¡ ¾î¶² ¼ıÀÚ¸¦ ¹Ş¾Æ¼­ do-while¹® ¹Ù²Ù±â(for¹®À¸·Î¸¸ ¹İº¹ÇØ¼­, ¸î¹øÀÌ³ª ½ò°ÇÁö¸¦ Á¤ÇÑ´Ù)
+    public IEnumerator Shooting(int count_)//ë‚˜ì¤‘ì— ì–´ë–¤ ìˆ«ìë¥¼ ë°›ì•„ì„œ do-whileë¬¸ ë°”ê¾¸ê¸°(forë¬¸ìœ¼ë¡œë§Œ ë°˜ë³µí•´ì„œ, ëª‡ë²ˆì´ë‚˜ ì ê±´ì§€ë¥¼ ì •í•œë‹¤)
     {
         float angle = 360 / oneShoting;
         Change_Weapon();

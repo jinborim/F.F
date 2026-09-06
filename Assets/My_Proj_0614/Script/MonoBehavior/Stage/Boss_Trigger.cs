@@ -29,13 +29,13 @@ public class Boss_Trigger : MonoBehaviour
                 bossMusic.Audio_Source.Pause();
 
                 character.movable = false;
-                StartCoroutine(camera_.Fixed_Boss()); //Ä«¸Ş¶ó¿¡¼­ °¡Á®¿Â ÄÚ·çÆ¾ ÇÔ¼ö·Î º¸½º¿¡°Ô ÀÚ¿¬½º·´°Ô Ä«¸Ş¶ó Åä½ºÇÒ°ÅÀÓ
+                StartCoroutine(camera_.Fixed_Boss()); //ì¹´ë©”ë¼ì—ì„œ ê°€ì ¸ì˜¨ ì½”ë£¨í‹´ í•¨ìˆ˜ë¡œ ë³´ìŠ¤ì—ê²Œ ìì—°ìŠ¤ëŸ½ê²Œ ì¹´ë©”ë¼ í† ìŠ¤í• ê±°ì„
 
                 dialog_.dialog_context.gameObject.SetActive(true);
                 dialog_.Typing_trigger(boss_Dialogue);
                 //boss_health.boss_health_parent.transform.GetChild(0).gameObject.SetActive(true);
                 Is_bossStage = true;
-                //StartCoroutine(camera_.Fixed_Boss()); //Ä«¸Ş¶ó¿¡¼­ °¡Á®¿Â ÄÚ·çÆ¾ ÇÔ¼ö·Î º¸½º¿¡°Ô ÀÚ¿¬½º·´°Ô Ä«¸Ş¶ó Åä½ºÇÒ°ÅÀÓ
+                //StartCoroutine(camera_.Fixed_Boss()); //ì¹´ë©”ë¼ì—ì„œ ê°€ì ¸ì˜¨ ì½”ë£¨í‹´ í•¨ìˆ˜ë¡œ ë³´ìŠ¤ì—ê²Œ ìì—°ìŠ¤ëŸ½ê²Œ ì¹´ë©”ë¼ í† ìŠ¤í• ê±°ì„
             }
 
 
@@ -67,7 +67,7 @@ public class Boss_Trigger : MonoBehaviour
         bossMusic = GameObject.FindObjectOfType<Boss_Music_Changer>();
         Is_bossStage = false;
         dialog_ = GameObject.FindObjectOfType<Boss_Dialog>();
-        boss_Dialogue = new string[] { "ÀÌ Æ÷µµ ÇÏ³ª°¡ ¹¹¶ó°í \n³» ¿µ¿ª±îÁö Ä§¹üÇØ ¿Â °Ç°¡...", "¿©¿ì°¡ ´Á´ë¸¦ ÀÌ±æ ¼ö ÀÖ´Ù »ı°¢ÇÏ´Ù´Ï.", "³» ¿µ¿ª¿¡ µé¾î¿Â ÀÌ»ó ³ª°¥ ¼ø ¾øÀ» °ÍÀÌ´Ù." };
+        boss_Dialogue = new string[] { "ì´ í¬ë„ í•˜ë‚˜ê°€ ë­ë¼ê³  \në‚´ ì˜ì—­ê¹Œì§€ ì¹¨ë²”í•´ ì˜¨ ê±´ê°€...", "ì—¬ìš°ê°€ ëŠ‘ëŒ€ë¥¼ ì´ê¸¸ ìˆ˜ ìˆë‹¤ ìƒê°í•˜ë‹¤ë‹ˆ.", "ë‚´ ì˜ì—­ì— ë“¤ì–´ì˜¨ ì´ìƒ ë‚˜ê°ˆ ìˆœ ì—†ì„ ê²ƒì´ë‹¤." };
         camera_ = Camera.FindObjectOfType<CameraController>();
         boss_health = GameObject.FindObjectOfType<Boss_Health>();
         boss_move = GameObject.FindObjectOfType<Boss_Movement>();

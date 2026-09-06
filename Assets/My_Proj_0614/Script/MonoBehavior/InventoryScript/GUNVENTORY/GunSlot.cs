@@ -7,14 +7,14 @@ using UnityEngine.EventSystems;
 
 public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public Item item; // È¹µæÇÑ ¾ÆÀÌÅÛ
-    public int itemCount; // È¹µæÇÑ ¾ÆÀÌÅÛÀÇ °³¼ö
-    public Image itemImage;  // ¾ÆÀÌÅÛÀÇ ÀÌ¹ÌÁö
+    public Item item; // íšë“í•œ ì•„ì´í…œ
+    public int itemCount; // íšë“í•œ ì•„ì´í…œì˜ ê°œìˆ˜
+    public Image itemImage;  // ì•„ì´í…œì˜ ì´ë¯¸ì§€
 
     //private GunSlot[] gunslot;
-    public GunType_selected gun; // È¹µæÇÑ ¹«±â
-    //public int itemCount; // È¹µæÇÑ ¾ÆÀÌÅÛÀÇ °³¼ö
-    public Image gunImage;  // ¾ÆÀÌÅÛÀÇ ÀÌ¹ÌÁö
+    public GunType_selected gun; // íšë“í•œ ë¬´ê¸°
+    //public int itemCount; // íšë“í•œ ì•„ì´í…œì˜ ê°œìˆ˜
+    public Image gunImage;  // ì•„ì´í…œì˜ ì´ë¯¸ì§€
     public GameObject selected_bulletPrefab;
     public GunType_selected.Gun_Type gunType_;
     //private keycode_selector key_selector;
@@ -46,7 +46,7 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
             if (eventData.button == PointerEventData.InputButton.Right)
             {
                 //Debug.Log(transform.GetComponent<GunSlot>().item);
-                //¿ìÅ¬¸¯ ½Ã ÇØ´ç ½½·ÔÀÇ ¾ÆÀÌÅÛÀ» µµ·Î topslot¿¡ °®´Ù³õÀ½.
+                //ìš°í´ë¦­ ì‹œ í•´ë‹¹ ìŠ¬ë¡¯ì˜ ì•„ì´í…œì„ ë„ë¡œ topslotì— ê°–ë‹¤ë†“ìŒ.
                 for (int i = 0; i < top_slot.Length; i++)
                 {
                     if (top_slot[i].item == null)
@@ -57,7 +57,7 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
                     }
                 }
 
-                //¿À¸¥ÂÊ ¸¶¿ì½º¸¦ Å¬¸¯ÇÏ¸é ÇØ´ç ½½·ÔÀÇ ¸ğµç gunÁ¤º¸¿Í ÇÁ¸®ÆÕ°ú È°¼ºÈ­ »óÅÂ ÇØÁ¦
+                //ì˜¤ë¥¸ìª½ ë§ˆìš°ìŠ¤ë¥¼ í´ë¦­í•˜ë©´ í•´ë‹¹ ìŠ¬ë¡¯ì˜ ëª¨ë“  gunì •ë³´ì™€ í”„ë¦¬íŒ¹ê³¼ í™œì„±í™” ìƒíƒœ í•´ì œ
                 this.ClearGunSlot();
                 transform.Find("select_Activate").gameObject.SetActive(false);
                 bullet_change.bullet_changer_test(null);
@@ -86,7 +86,7 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
         }
     }
 
-    // ¸¶¿ì½º µå·¡±× ÁßÀÏ ¶§ °è¼Ó ¹ß»ıÇÏ´Â ÀÌº¥Æ®
+    // ë§ˆìš°ìŠ¤ ë“œë˜ê·¸ ì¤‘ì¼ ë•Œ ê³„ì† ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
     public void OnDrag(PointerEventData eventData)
     {
 
@@ -101,7 +101,7 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
 
     }
 
-    // ¸¶¿ì½º µå·¡±×°¡ ³¡³µÀ» ¶§ ¹ß»ıÇÏ´Â ÀÌº¥Æ®
+    // ë§ˆìš°ìŠ¤ ë“œë˜ê·¸ê°€ ëë‚¬ì„ ë•Œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
     public void OnEndDrag(PointerEventData eventData)
     {
         
@@ -121,7 +121,7 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
         if (GunDragSlot.instance.dragSlot != null)
         {
             ChangeSlot();
-            //bullet_change.bullet_changer_test(this.gun);//¹Ù²Û ÀÚ¸®°¡ È°¼ºÈ­µÇ¾îÀÖ´Ù¸é...
+            //bullet_change.bullet_changer_test(this.gun);//ë°”ê¾¼ ìë¦¬ê°€ í™œì„±í™”ë˜ì–´ìˆë‹¤ë©´...
         }
         
     }
@@ -168,7 +168,7 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
         {
             if (Gun_slot[i].gun != null && (Gun_slot[i].gunType_ == _gun.gun_Type))
             {
-                //ºñ¾îÀÖÁö ¾ÊÀº ½½·Ô¿¡ ÀÖ´Â gunTypeÀÌ »õ·Î ÀúÀåÇÒ gunÀÇ gunType°ú °°À» ¶§ : ¿ø·¡ ÀÖ´ø ºÎºĞÀ» Áö¿ì°í »õ·Î¿î gunÀ» µå·ÓµÈ ÀÚ¸®¿¡ ¸¸µê
+                //ë¹„ì–´ìˆì§€ ì•Šì€ ìŠ¬ë¡¯ì— ìˆëŠ” gunTypeì´ ìƒˆë¡œ ì €ì¥í•  gunì˜ gunTypeê³¼ ê°™ì„ ë•Œ : ì›ë˜ ìˆë˜ ë¶€ë¶„ì„ ì§€ìš°ê³  ìƒˆë¡œìš´ gunì„ ë“œë¡­ëœ ìë¦¬ì— ë§Œë“¦
                 Gun_slot[i].ClearGunSlot();
                 GunChange(_item,_gun);
                 if (Gun_slot[i].activated_ == true&&Gun_slot[i].gun!=null) //
@@ -180,7 +180,7 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
             }
             else if (Gun_slot[i].gun != null && (Gun_slot[i].gunType_ != _gun.gun_Type))
             {
-                //ºñ¾îÀÖÁö ¾ÊÀº ½½·Ô¿¡ ÀÖ´Â gunTypeÀÌ »õ·Î ÀúÀåÇÒ gun°ú ´Ù¸¦ ¶§: ±×³É Ãß°¡
+                //ë¹„ì–´ìˆì§€ ì•Šì€ ìŠ¬ë¡¯ì— ìˆëŠ” gunTypeì´ ìƒˆë¡œ ì €ì¥í•  gunê³¼ ë‹¤ë¥¼ ë•Œ: ê·¸ëƒ¥ ì¶”ê°€
                 GunChange(_item, _gun);
 
                 
@@ -189,7 +189,7 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
 
             else
             {
-                //ºñ¾îÀÖ´Â ½½·ÔÀÇ °æ¿ì: ±×³É Ãß°¡
+                //ë¹„ì–´ìˆëŠ” ìŠ¬ë¡¯ì˜ ê²½ìš°: ê·¸ëƒ¥ ì¶”ê°€
                 GunChange(_item, _gun);
                 
             }
@@ -207,7 +207,7 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
         //itemCount = _count;
         //itemImage.sprite = item.itemImage;
 
-        //ÇØ´ç ½½·ÔÀÇ ÃÑ¿¡ ´ëÇÑ Á¤º¸¸¦ ÀüºÎ ¹Ù²ãÁØ´Ù
+        //í•´ë‹¹ ìŠ¬ë¡¯ì˜ ì´ì— ëŒ€í•œ ì •ë³´ë¥¼ ì „ë¶€ ë°”ê¿”ì¤€ë‹¤
         gun = _gun;
         gunImage.sprite = gun.BulletImage;
         selected_bulletPrefab = gun.BulletPrefab;
@@ -257,9 +257,5 @@ public class GunSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IBegin
         }
             
     }
-
-  
-
-
 
 }

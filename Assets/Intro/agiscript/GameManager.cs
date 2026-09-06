@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public GameObject talkPanel;
     public Text gtext;
-    public bool isAction; //´ëÈ­Ã¢ È°¼ºÈ­ »óÅÂ 
+    public bool isAction; //ëŒ€í™”ì°½ í™œì„±í™” ìƒíƒœ 
 
-    //¾À 2ÀÇ ¸ó½ºÅÍ »èÁ¦
+    //ì”¬ 2ì˜ ëª¬ìŠ¤í„° ì‚­ì œ
     public GameObject monster;
     public enemyDead enemyControl;
     public PlayerMovement player;
@@ -35,17 +35,17 @@ public class GameManager : MonoBehaviour
 
     public void Action()
     {
-        if (isAction) // ½ÇÇàÁßÀÎµ¥ ¶Ç ¾×¼ÇÀ» ½ÇÇàÇÑ°æ¿ì -> ÀÌ¹Ì trueÀÎ°æ¿ì
+        if (isAction) // ì‹¤í–‰ì¤‘ì¸ë° ë˜ ì•¡ì…˜ì„ ì‹¤í–‰í•œê²½ìš° -> ì´ë¯¸ trueì¸ê²½ìš°
         {
-            isAction = false; //false·Î º¯°æ
+            isAction = false; //falseë¡œ ë³€ê²½
 
         }
-        else //½ÇÇàÁß -> ´ëÈ­Ã¢ ¶ç¿ì±â 
+        else //ì‹¤í–‰ì¤‘ -> ëŒ€í™”ì°½ ë„ìš°ê¸° 
         {
             isAction = true;
         }
 
-        talkPanel.SetActive(isAction); //´ëÈ­Ã¢ È°¼ºÈ­ »óÅÂ¿¡ µû¶ó ´ëÈ­Ã¢ È°¼ºÈ­ º¯°æ
+        talkPanel.SetActive(isAction); //ëŒ€í™”ì°½ í™œì„±í™” ìƒíƒœì— ë”°ë¼ ëŒ€í™”ì°½ í™œì„±í™” ë³€ê²½
     }
 
     public void Scene22(bool scene2)

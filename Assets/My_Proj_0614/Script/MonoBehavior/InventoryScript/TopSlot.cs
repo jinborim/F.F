@@ -12,11 +12,11 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public GameObject TopInventory_Parent;
     public TopSlot[] topslots_topslot;
 
-    public Item item; // È¹µæÇÑ ¾ÆÀÌÅÛ
+    public Item item; // íšë“í•œ ì•„ì´í…œ
     public GunType_selected gun;
     public GunSlot gunslot;
-    public int itemCount; // È¹µæÇÑ ¾ÆÀÌÅÛÀÇ °³¼ö
-    public Image itemImage;  // ¾ÆÀÌÅÛÀÇ ÀÌ¹ÌÁö
+    public int itemCount; // íšë“í•œ ì•„ì´í…œì˜ ê°œìˆ˜
+    public Image itemImage;  // ì•„ì´í…œì˜ ì´ë¯¸ì§€
     
     //public Image gunImage;
     public GameObject selected_bulletPrefab;
@@ -45,7 +45,7 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
 
 
 
-    //https://daily50.tistory.com/508 Âü°íÇØ¼­ ¸¶¿ì½º ¿À¹ö ÀÌº¥Æ®...(¸¶¿ì½º ¿À¹öÇÏ¸é ÇØ´ç ½½·ÔÀÇ ÇÏÀ§ ActivateºÎºĞÀÌ È°¼ºÈ­µÇ¸é¼­ ½Ã°¢Àû È¿°ú¸¦ ÁÜ)
+    //https://daily50.tistory.com/508 ì°¸ê³ í•´ì„œ ë§ˆìš°ìŠ¤ ì˜¤ë²„ ì´ë²¤íŠ¸...(ë§ˆìš°ìŠ¤ ì˜¤ë²„í•˜ë©´ í•´ë‹¹ ìŠ¬ë¡¯ì˜ í•˜ìœ„ Activateë¶€ë¶„ì´ í™œì„±í™”ë˜ë©´ì„œ ì‹œê°ì  íš¨ê³¼ë¥¼ ì¤Œ)
     public void OnPointerEnter(PointerEventData eventData)
     {
 
@@ -93,7 +93,7 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         }
     }
 
-    // ¸¶¿ì½º µå·¡±× ÁßÀÏ ¶§ °è¼Ó ¹ß»ıÇÏ´Â ÀÌº¥Æ®
+    // ë§ˆìš°ìŠ¤ ë“œë˜ê·¸ ì¤‘ì¼ ë•Œ ê³„ì† ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
     public void OnDrag(PointerEventData eventData)
     {
 
@@ -107,7 +107,7 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
 
     }
 
-    // ¸¶¿ì½º µå·¡±×°¡ ³¡³µÀ» ¶§ ¹ß»ıÇÏ´Â ÀÌº¥Æ®
+    // ë§ˆìš°ìŠ¤ ë“œë˜ê·¸ê°€ ëë‚¬ì„ ë•Œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
     public void OnEndDrag(PointerEventData eventData)
     {
         if (GunSlot.is_drop == true)
@@ -154,7 +154,7 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
             ChangeSlot();
 
         }
-        this.is_top_drag = false; //Å¾ ½½·Ô¿¡¼­ Å¾½½·ÔÀ¸·Î µå·¡±×ÇßÀ» ¶§ ¾Æ¹« ÀÇ¹Ì ¾øÀÌ false·Î ¹Ù²ãÁÜ..
+        this.is_top_drag = false; //íƒ‘ ìŠ¬ë¡¯ì—ì„œ íƒ‘ìŠ¬ë¡¯ìœ¼ë¡œ ë“œë˜ê·¸í–ˆì„ ë•Œ ì•„ë¬´ ì˜ë¯¸ ì—†ì´ falseë¡œ ë°”ê¿”ì¤Œ..
     }
 
     private void ChangeSlot()
@@ -180,7 +180,7 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     private void Start()
     {
         go_CountImage.SetActive(false);
-        //¾Æ¹«°Íµµ ¾Èµé¾îÀÖ´Â ÀÎº¥Åä¸®¿¡´Â ¼ıÀÚ°¡ ¾È¶ß°Ô²û..
+        //ì•„ë¬´ê²ƒë„ ì•ˆë“¤ì–´ìˆëŠ” ì¸ë²¤í† ë¦¬ì—ëŠ” ìˆ«ìê°€ ì•ˆëœ¨ê²Œë”..
         Gun_slot = gun_SlotsParent.GetComponentsInChildren<GunSlot>();
         Parent_transform.GetChild(0).transform.Find("Slot_Activate").gameObject.SetActive(false);
         bullet_change = GameObject.FindObjectOfType<bulletTest>();
@@ -192,7 +192,7 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
 
     }
 
-    // ¾ÆÀÌÅÛ ÀÌ¹ÌÁöÀÇ Åõ¸íµµ Á¶Àı
+    // ì•„ì´í…œ ì´ë¯¸ì§€ì˜ íˆ¬ëª…ë„ ì¡°ì ˆ
     private void SetColor(float _alpha)
     {
         Color color = itemImage.color;
@@ -200,7 +200,7 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         itemImage.color = color;
     }
 
-    // ÀÎº¥Åä¸®¿¡ »õ·Î¿î ¾ÆÀÌÅÛ ½½·Ô Ãß°¡
+    // ì¸ë²¤í† ë¦¬ì— ìƒˆë¡œìš´ ì•„ì´í…œ ìŠ¬ë¡¯ ì¶”ê°€
     public void AddItem(Item _item, GunType_selected _gun, int _count = 1)
     {
         item = _item;
@@ -224,7 +224,7 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         SetColor(1);
     }
 
-    // ÇØ´ç ½½·ÔÀÇ ¾ÆÀÌÅÛ °¹¼ö ¾÷µ¥ÀÌÆ®
+    // í•´ë‹¹ ìŠ¬ë¡¯ì˜ ì•„ì´í…œ ê°¯ìˆ˜ ì—…ë°ì´íŠ¸
     public void SetSlotCount(int _count)
     {
         itemCount += _count;
@@ -237,7 +237,7 @@ public class TopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
 
     }
 
-    // ÇØ´ç ½½·Ô ÇÏ³ª »èÁ¦
+    // í•´ë‹¹ ìŠ¬ë¡¯ í•˜ë‚˜ ì‚­ì œ
     public void ClearSlot()
     {
         item = null;

@@ -18,6 +18,13 @@ public class HP_Manager : MonoBehaviour
     public CharacterMovement character;
 
 
+    void Start()
+    {
+        Hp_parent = this.transform.gameObject;
+        life = Hp_parent.GetComponentsInChildren<HP_Heart>();
+        character = GameObject.FindObjectOfType<CharacterMovement>();
+    }
+
     public void Damaged(int _damage)
     {
         character.is_Beat = true;
@@ -37,7 +44,7 @@ public class HP_Manager : MonoBehaviour
                     else if (i == 0)
                     {
                         life[i].Heart_Health = 0;
-                        //Debug.Log("»ç¸Á");
+                        //Debug.Log("ì‚¬ë§");
                         character.DIE();
                     }
 
@@ -112,30 +119,9 @@ public class HP_Manager : MonoBehaviour
     }
 
 
-    public void Health_Status(int index, float health, string _what) //whatÀº D¶û HÀ¸·Î µ¥¹ÌÁöÀÎÁö È¸º¹ÀÎÁö ±¸ºĞÇÒ°ÅÀÓ
+    public void Health_Status(int index, float health, string _what) //whatì€ Dë‘ Hìœ¼ë¡œ ë°ë¯¸ì§€ì¸ì§€ íšŒë³µì¸ì§€ êµ¬ë¶„í• ê±°ì„
     {
         life[index].hp_Heart.fillAmount = (health / Full_Health);
     }
-
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Hp_parent = this.transform.gameObject;
-        life = Hp_parent.GetComponentsInChildren<HP_Heart>();
-        character = GameObject.FindObjectOfType<CharacterMovement>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
-
 
 }

@@ -30,7 +30,7 @@ public class TalkText : MonoBehaviour
         talkPanel = GameObject.FindObjectOfType<GameManager>().talkPanel;
         manager = GameObject.FindObjectOfType<GameManager>();
         text = manager.gtext;
-        text.text = "¾È³ç, ³×°¡ È²±İÆ÷µµ¸¦ Ã£´Â´Ù´ø ¿©¿ìÇØ°á»çÁö?";
+        text.text = "ì•ˆë…•, ë„¤ê°€ í™©ê¸ˆí¬ë„ë¥¼ ì°¾ëŠ”ë‹¤ë˜ ì—¬ìš°í•´ê²°ì‚¬ì§€?";
 
         player = GameObject.FindObjectOfType<PlayergoOut>();
         player.tt = this.gameObject.GetComponent<TalkText>();
@@ -45,56 +45,6 @@ public class TalkText : MonoBehaviour
         
     }
 
-    /*
-     if (Input.GetMouseButtonDown(0))
-            {
-                if (clickCount == 0)
-                {
-                    text.text = "ÀÇ·Ú¸¦ ÇÏ·¯ ¿Ô¾î.";
-                    clickCount++; //1
-                    yield return null;
-                }
-
-                else if (clickCount == 1)
-                {
-                    text.text = "³ª´Â È²±İÆ÷µµÀÇ À§Ä¡¸¦ ¾Ë°í ÀÖÁö.";
-                    clickCount++; //2
-                    yield return null;
-
-                }
-                else if (clickCount == 2)
-                {
-
-                    text.text = "È²±İÆ÷µµ´Â ½£ ¼ÓÀÇ ¾ËÆÄ ´Á´ë°¡ °¡Áö°í ÀÖ¾î.";
-                    clickCount++; //2
-                    yield return null;
-
-                }
-                else if (clickCount == 3)
-                {
-                    text.text = "¹Ï¾îµµ ÁÁ¾Æ. ´Á´ë¿¡ ´ëÇÑ °Å¶ó¸é ³ª¸¸Å­ Á¤È®ÇÑ »ç¶÷Àº ¾øÀ» °É?";
-                    clickCount++; //2
-                    yield return null;
-
-                }
-                else if (clickCount == 4)
-                {
-
-                    text.text = "º¸¼ö´Â ´Á´ë ¹«¸®ÀÇ ±«¸êÀÌ¾ß. ±×¸® Ã£´ø Æ÷µµ °ªÀ¸·Ğ ²Ï ½ÎÁö?";
-                    clickCount++; //2
-                    yield return null;
-
-                }
-                else if (clickCount == 5)
-                {
-
-                    text.text = "ÁöÃ¼ÇÒ °Í ¾ø°ÚÁö. ¹Ù·Î °¡ÀÚ.";
-                    clickCount++; //2
-                    yield return null;
-
-                }
-     */
-
 
     public void Scene55(bool is_true)
     {
@@ -107,41 +57,41 @@ public class TalkText : MonoBehaviour
             {
                 if (clickCount == 0)
                 {
-                    text.text = "ÀÇ·Ú¸¦ ÇÏ·¯ ¿Ô¾î. ´çºĞ°£ ÀÏÀ» ¾È ¹Ş´Â´Ù´Â °Ç ¾ËÁö¸¸... ±×·¡µµ °ÅÀıÇÒ ¼ø ¾øÀ» °É?";
+                    text.text = "ì˜ë¢°ë¥¼ í•˜ëŸ¬ ì™”ì–´. ë‹¹ë¶„ê°„ ì¼ì„ ì•ˆ ë°›ëŠ”ë‹¤ëŠ” ê±´ ì•Œì§€ë§Œ... ê·¸ë˜ë„ ê±°ì ˆí•  ìˆœ ì—†ì„ ê±¸?";
                     clickCount++; //1
 
                 }
 
                 else if (clickCount == 1)
                 {
-                    text.text = "³ª´Â È²±İÆ÷µµÀÇ À§Ä¡¸¦ ¾Ë°í ÀÖ°Åµç. È²±İÆ÷µµ´Â ½£ ¼ÓÀÇ ¾ËÆÄ ´Á´ë°¡ °¡Áö°í ÀÖ¾î.";
+                    text.text = "ë‚˜ëŠ” í™©ê¸ˆí¬ë„ì˜ ìœ„ì¹˜ë¥¼ ì•Œê³  ìˆê±°ë“ . í™©ê¸ˆí¬ë„ëŠ” ìˆ² ì†ì˜ ì•ŒíŒŒ ëŠ‘ëŒ€ê°€ ê°€ì§€ê³  ìˆì–´.";
                     clickCount++; //2
 
                 }
                 else if (clickCount == 2)
                 {
 
-                    text.text = "¹Ï¾îµµ ÁÁ¾Æ. ´Á´ë¿¡ ´ëÇÑ °Å¶ó¸é ³ª¸¸Å­ Á¤È®ÇÑ »ç¶÷Àº ¾øÀ» °É?";
+                    text.text = "ë¯¿ì–´ë„ ì¢‹ì•„. ëŠ‘ëŒ€ì— ëŒ€í•œ ê±°ë¼ë©´ ë‚˜ë§Œí¼ ì •í™•í•œ ì‚¬ëŒì€ ì—†ì„ ê±¸?";
                     clickCount++; //2
 
                 }
                 else if (clickCount == 3)
                 {
-                    text.text = "º¸¼ö´Â ´Á´ë ¹«¸®ÀÇ ±«¸êÀÌ¾ß. ±×¸® Ã£´ø Æ÷µµ °ªÀ¸·Ğ ²Ï ½ÎÁö? ³ÊÇÑÅ× ±×·± °Ç ÀÏµµ ¾Æ´ÏÀİ¾Æ.";
+                    text.text = "ë³´ìˆ˜ëŠ” ëŠ‘ëŒ€ ë¬´ë¦¬ì˜ ê´´ë©¸ì´ì•¼. ê·¸ë¦¬ ì°¾ë˜ í¬ë„ ê°’ìœ¼ë¡  ê½¤ ì‹¸ì§€? ë„ˆí•œí…Œ ê·¸ëŸ° ê±´ ì¼ë„ ì•„ë‹ˆì–ì•„.";
                     clickCount++; //2
 
                 }
                 else if (clickCount == 4)
                 {
 
-                    text.text = "±Ùµ¥ Æ÷µµ´Â ¿Ö ±×¸® Ã£´Â °Å¾ß? ±×°É ¸ÔÀ¸¸é ÀÒ¾î¹ö¸° ±â¾ïÀ» µÇÃ£±â¶óµµ ÇØ?";
+                    text.text = "ê·¼ë° í¬ë„ëŠ” ì™œ ê·¸ë¦¬ ì°¾ëŠ” ê±°ì•¼? ê·¸ê±¸ ë¨¹ìœ¼ë©´ ìƒì–´ë²„ë¦° ê¸°ì–µì„ ë˜ì°¾ê¸°ë¼ë„ í•´?";
                     clickCount++; //2
 
                 }
                 else if (clickCount == 5)
                 {
 
-                    text.text = "...ÅÍ¹«´Ï ¾ø³×. ¹¹, ÁÁ¾Æ. ±×·³ ÁöÃ¼ÇÒ °Í ¾ø°ÚÁö. ¹Ù·Î °¡ÀÚ.";
+                    text.text = "...í„°ë¬´ë‹ˆ ì—†ë„¤. ë­, ì¢‹ì•„. ê·¸ëŸ¼ ì§€ì²´í•  ê²ƒ ì—†ê² ì§€. ë°”ë¡œ ê°€ì.";
                     clickCount++; //2
                 }
                 else if (clickCount == 6)
@@ -154,7 +104,7 @@ public class TalkText : MonoBehaviour
             }
         }
     }
-    //´ë»ç ½ºÅ©¸³Æ®
+    //ëŒ€ì‚¬ ìŠ¤í¬ë¦½íŠ¸
 
 
     public void test()

@@ -10,7 +10,7 @@ public class Dialog_Test : MonoBehaviour
     public static GameObject Dialogue;
 
     public GameObject dialogObj;
-    public Text dialog_context; // ÅØ½ºÆ®(¿©±â¼± ´ë»ç)¸¦ Ãâ·ÂÇÒ 'Text ÄÄÆ÷³ÍÆ®¸¦ °¡Áø ¿ÀºêÁ§Æ®' ÇÒ´ç
+    public Text dialog_context; // í…ìŠ¤íŠ¸(ì—¬ê¸°ì„  ëŒ€ì‚¬)ë¥¼ ì¶œë ¥í•  'Text ì»´í¬ë„ŒíŠ¸ë¥¼ ê°€ì§„ ì˜¤ë¸Œì íŠ¸' í• ë‹¹
     string[] dialogue;
     [SerializeField]
     private GameObject select_base;
@@ -41,9 +41,9 @@ public class Dialog_Test : MonoBehaviour
 
     public void Typing_trigger(string[] _dialog, bool _selectP)
     {
-        // ´Ù¸¥ ½ºÅ©¸³Æ®¿¡¼­ ÇöÀç ½ºÅ©¸³Æ®¸¦ ÂüÁ¶ÇØ¼­ Typing_trigger »ç¿ë
-        // bool ÇüÀº »ç½Ç»ó ÇÊ¿ä¾ø¾îº¸ÀÌ±ä ÇÑµ¥, ³ªÁß¿¡ ´Ù¸¥°÷¿¡¼­ boolÇü º¯¼ö¸¦ ±×´ë·Î °¡Á®´Ù ÂüÁ¶ÇÏ¸é ÆíÇÒ°Å°°¾Æ¼­ ¹Ì¸® ¸¸µê(¹®Á¦ ½Ã »èÁ¦ÇÏ¸é µÊ)
-        // ´Ù¸¥ ½ºÅ©¸³Æ®¿¡¼­ ÀÌ ÇÔ¼ö¸¦ ºÒ·¯¿Ã ¶§ 'Ãâ·ÂÇÒ ÅØ½ºÆ®'¸¦ ¹Ì¸® ÁöÁ¤ÇØ¼­ º¯¼ö·Î ³Ö¾îÁÖ¸é ±×´ë·Î °¡Á®¿Í¼­ dialogue¿¡ ÀúÀå ÈÄ ÀÌ dialogue¸¦ Typing_Test¿¡ ³Ö¾î ÇÑ±ÛÀÚ¾¿ Ãâ·ÂÇÏ´Â ÄÚ·¯Æ¾À¸·Î ¸¸µé¾îÁÜ
+        // ë‹¤ë¥¸ ìŠ¤í¬ë¦½íŠ¸ì—ì„œ í˜„ì¬ ìŠ¤í¬ë¦½íŠ¸ë¥¼ ì°¸ì¡°í•´ì„œ Typing_trigger ì‚¬ìš©
+        // bool í˜•ì€ ì‚¬ì‹¤ìƒ í•„ìš”ì—†ì–´ë³´ì´ê¸´ í•œë°, ë‚˜ì¤‘ì— ë‹¤ë¥¸ê³³ì—ì„œ boolí˜• ë³€ìˆ˜ë¥¼ ê·¸ëŒ€ë¡œ ê°€ì ¸ë‹¤ ì°¸ì¡°í•˜ë©´ í¸í• ê±°ê°™ì•„ì„œ ë¯¸ë¦¬ ë§Œë“¦(ë¬¸ì œ ì‹œ ì‚­ì œí•˜ë©´ ë¨)
+        // ë‹¤ë¥¸ ìŠ¤í¬ë¦½íŠ¸ì—ì„œ ì´ í•¨ìˆ˜ë¥¼ ë¶ˆëŸ¬ì˜¬ ë•Œ 'ì¶œë ¥í•  í…ìŠ¤íŠ¸'ë¥¼ ë¯¸ë¦¬ ì§€ì •í•´ì„œ ë³€ìˆ˜ë¡œ ë„£ì–´ì£¼ë©´ ê·¸ëŒ€ë¡œ ê°€ì ¸ì™€ì„œ dialogueì— ì €ì¥ í›„ ì´ dialogueë¥¼ Typing_Testì— ë„£ì–´ í•œê¸€ìì”© ì¶œë ¥í•˜ëŠ” ì½”ëŸ¬í‹´ìœ¼ë¡œ ë§Œë“¤ì–´ì¤Œ
         //dialogue = _dialog;
 
         StartCoroutine(Typing_Test(_dialog, _selectP));
@@ -53,8 +53,8 @@ public class Dialog_Test : MonoBehaviour
 
     IEnumerator Typing_Test(string[] dialogue, bool _selectP)
     {
-        //ÀÌ ÇÔ¼ö°¡ ½ÃÀÛÇÒ ¶§ ÇÑ ¹ø ³»¿ë¹°À» ½Ï ºñ¿öÁØ´Ù(¾È±×·¯¸é ÀüÀÇ ´ë»ç¿¡ Ãß°¡ÇØ¼­ ³ª¿È)
-        //À§ÀÇ Typing_trigger¿¡¼­ dialogue¸¦ °¡Á®¿Í¼­ talk¶ó´Â Áö¿ªº¯¼ö?·Î »ç¿ë
+        //ì´ í•¨ìˆ˜ê°€ ì‹œì‘í•  ë•Œ í•œ ë²ˆ ë‚´ìš©ë¬¼ì„ ì‹¹ ë¹„ì›Œì¤€ë‹¤(ì•ˆê·¸ëŸ¬ë©´ ì „ì˜ ëŒ€ì‚¬ì— ì¶”ê°€í•´ì„œ ë‚˜ì˜´)
+        //ìœ„ì˜ Typing_triggerì—ì„œ dialogueë¥¼ ê°€ì ¸ì™€ì„œ talkë¼ëŠ” ì§€ì—­ë³€ìˆ˜?ë¡œ ì‚¬ìš©
 
         dialog_context.text = null;
         soundEffect = GameObject.FindObjectOfType<SoundEffect_Manager>();
@@ -65,19 +65,19 @@ public class Dialog_Test : MonoBehaviour
             string talk = dialogue[i];
             for (int j = 0; j < talk.Length; j++)
             {
-                //ÀÔ·Â¹ŞÀº ´ë»çÀÇ ±æÀÌ¸¸Å­ ¹İº¹
-                //À§¿¡¼­ TextÇü½ÄÀ¸·Î ÁöÁ¤ÇØÁØ dialog_contextÀÇ ÅØ½ºÆ®¿¡ String Çü½ÄÀÎ talk¸¦ ÇÑ±ÛÀÚ¾¿ Áı¾î³Ö¾îÁÜ
-                // >> °á°úÀûÀ¸·Î ÅØ½ºÆ®¿¡ ÇÑ±ÛÀÚ¾¿ Ãß°¡µÇ´Â °ÍÀÌ¹Ç·Î È­¸é»óÀ¸·Ğ ÇÑ±ÛÀÚ¾¿ ¸»ÇÏ´Â°ÅÃ³·³ º¸ÀÌ°Ô µÊ
+                //ì…ë ¥ë°›ì€ ëŒ€ì‚¬ì˜ ê¸¸ì´ë§Œí¼ ë°˜ë³µ
+                //ìœ„ì—ì„œ Textí˜•ì‹ìœ¼ë¡œ ì§€ì •í•´ì¤€ dialog_contextì˜ í…ìŠ¤íŠ¸ì— String í˜•ì‹ì¸ talkë¥¼ í•œê¸€ìì”© ì§‘ì–´ë„£ì–´ì¤Œ
+                // >> ê²°ê³¼ì ìœ¼ë¡œ í…ìŠ¤íŠ¸ì— í•œê¸€ìì”© ì¶”ê°€ë˜ëŠ” ê²ƒì´ë¯€ë¡œ í™”ë©´ìƒìœ¼ë¡  í•œê¸€ìì”© ë§í•˜ëŠ”ê±°ì²˜ëŸ¼ ë³´ì´ê²Œ ë¨
                 dialog_context.text += talk[j];
 
                 soundEffect.Effect_Sound("DIALOG1");
-                yield return new WaitForSeconds(0.05f); //ÄÚ·¯Æ¾ ÇÔ¼ö¿¡¼­ »ç¿ëÇÏ´Â ÇÔ¼ö·Î, ÁöÁ¤µÈ ½Ã°£¿¡ ÇÑ¹ø¾¿ µ¹¾Æ°¡°Ô µÊ > ±ÛÀÚ Ãâ·Â ¼Óµµ¶û °°´Ù°í º¼ ¼ö ÀÖÀ½
+                yield return new WaitForSeconds(0.05f); //ì½”ëŸ¬í‹´ í•¨ìˆ˜ì—ì„œ ì‚¬ìš©í•˜ëŠ” í•¨ìˆ˜ë¡œ, ì§€ì •ëœ ì‹œê°„ì— í•œë²ˆì”© ëŒì•„ê°€ê²Œ ë¨ > ê¸€ì ì¶œë ¥ ì†ë„ë‘ ê°™ë‹¤ê³  ë³¼ ìˆ˜ ìˆìŒ
             }
             yield return new WaitForSeconds(0.5f);
         }
         if (_selectP == true)
         {
-            select_base.SetActive(true); //³¡³ª¸é ¼±ÅÃÃ¢ÀÌ ¶ß°Ô µÊ
+            select_base.SetActive(true); //ëë‚˜ë©´ ì„ íƒì°½ì´ ëœ¨ê²Œ ë¨
         }
         else
         {

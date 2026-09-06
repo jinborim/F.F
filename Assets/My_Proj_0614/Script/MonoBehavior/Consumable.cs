@@ -5,7 +5,7 @@ using UnityEngine;
 public class Consumable : MonoBehaviour
 {
     public Item item;
-
+    
     // Start is called before the first frame update
     void Start()
     {

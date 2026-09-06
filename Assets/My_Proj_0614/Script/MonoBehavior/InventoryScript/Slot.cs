@@ -9,9 +9,9 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
 
     public GameObject Slot_;
 
-    public Item item; // È¹µæÇÑ ¾ÆÀÌÅÛ
-    public int itemCount; // È¹µæÇÑ ¾ÆÀÌÅÛÀÇ °³¼ö
-    public Image itemImage;  // ¾ÆÀÌÅÛÀÇ ÀÌ¹ÌÁö
+    public Item item; // íšë“í•œ ì•„ì´í…œ
+    public int itemCount; // íšë“í•œ ì•„ì´í…œì˜ ê°œìˆ˜
+    public Image itemImage;  // ì•„ì´í…œì˜ ì´ë¯¸ì§€
 
     [SerializeField]
     private Text text_Count;
@@ -25,7 +25,7 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
 
     public SoundEffect_Manager soundEffect;
 
-    //https://daily50.tistory.com/508 Âü°íÇØ¼­ ¸¶¿ì½º ¿À¹ö ÀÌº¥Æ®...(¸¶¿ì½º ¿À¹öÇÏ¸é ÇØ´ç ½½·ÔÀÇ ÇÏÀ§ ActivateºÎºĞÀÌ È°¼ºÈ­µÇ¸é¼­ ½Ã°¢Àû È¿°ú¸¦ ÁÜ)
+    //https://daily50.tistory.com/508 ì°¸ê³ í•´ì„œ ë§ˆìš°ìŠ¤ ì˜¤ë²„ ì´ë²¤íŠ¸...(ë§ˆìš°ìŠ¤ ì˜¤ë²„í•˜ë©´ í•´ë‹¹ ìŠ¬ë¡¯ì˜ í•˜ìœ„ Activateë¶€ë¶„ì´ í™œì„±í™”ë˜ë©´ì„œ ì‹œê°ì  íš¨ê³¼ë¥¼ ì¤Œ)
     public void OnPointerEnter(PointerEventData eventData)
     {
         
@@ -40,7 +40,7 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
     }
 
 
-    public void OnPointerClick(PointerEventData eventData) //¾ÆÀÌÅÛ »ç¿ë
+    public void OnPointerClick(PointerEventData eventData) //ì•„ì´í…œ ì‚¬ìš©
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
@@ -48,15 +48,15 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
             {
                 if (item.itemType == Item.ItemType.Equipment)
                 {
-                    // ÀåÂø
+                    // ì¥ì°©
                     //StartCoroutine(theWeaponManager.ChangeWeaponCoroutine(item.weaponType, item.itemName));
                 }
                 else
                 {
-                    // ¼Òºñ
+                    // ì†Œë¹„
                     ItemUse(item);
                     soundEffect.Effect_Sound("ITEMUSE");
-                    Debug.Log(item.itemName + " À» »ç¿ëÇß½À´Ï´Ù.");
+                    Debug.Log(item.itemName + " ì„ ì‚¬ìš©í–ˆìŠµë‹ˆë‹¤.");
                     SetSlotCount(-1);
                 }
             }
@@ -76,7 +76,7 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
         }
     }
 
-    // ¸¶¿ì½º µå·¡±× ÁßÀÏ ¶§ °è¼Ó ¹ß»ıÇÏ´Â ÀÌº¥Æ®
+    // ë§ˆìš°ìŠ¤ ë“œë˜ê·¸ ì¤‘ì¼ ë•Œ ê³„ì† ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
     public void OnDrag(PointerEventData eventData)
     {
         
@@ -90,7 +90,7 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
         
     }
 
-    // ¸¶¿ì½º µå·¡±×°¡ ³¡³µÀ» ¶§ ¹ß»ıÇÏ´Â ÀÌº¥Æ®
+    // ë§ˆìš°ìŠ¤ ë“œë˜ê·¸ê°€ ëë‚¬ì„ ë•Œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
     public void OnEndDrag(PointerEventData eventData)
     {
         
@@ -139,7 +139,7 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
     }
 
 
-    // ¾ÆÀÌÅÛ ÀÌ¹ÌÁöÀÇ Åõ¸íµµ Á¶Àı
+    // ì•„ì´í…œ ì´ë¯¸ì§€ì˜ íˆ¬ëª…ë„ ì¡°ì ˆ
     private void SetColor(float _alpha)
     {
         Color color = itemImage.color;
@@ -147,7 +147,7 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
         itemImage.color = color;
     }
 
-    // ÀÎº¥Åä¸®¿¡ »õ·Î¿î ¾ÆÀÌÅÛ ½½·Ô Ãß°¡
+    // ì¸ë²¤í† ë¦¬ì— ìƒˆë¡œìš´ ì•„ì´í…œ ìŠ¬ë¡¯ ì¶”ê°€
     public void AddItem(Item _item, int _count = 1)
     {
         item = _item;
@@ -168,7 +168,7 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
         SetColor(1);
     }
 
-    // ÇØ´ç ½½·ÔÀÇ ¾ÆÀÌÅÛ °¹¼ö ¾÷µ¥ÀÌÆ®
+    // í•´ë‹¹ ìŠ¬ë¡¯ì˜ ì•„ì´í…œ ê°¯ìˆ˜ ì—…ë°ì´íŠ¸
     public void SetSlotCount(int _count)
     {
         itemCount += _count;
@@ -181,7 +181,7 @@ public class Slot : MonoBehaviour,  IBeginDragHandler, IDragHandler, IEndDragHan
             
     }
 
-    // ÇØ´ç ½½·Ô ÇÏ³ª »èÁ¦
+    // í•´ë‹¹ ìŠ¬ë¡¯ í•˜ë‚˜ ì‚­ì œ
     private void ClearSlot()
     {
         item = null;

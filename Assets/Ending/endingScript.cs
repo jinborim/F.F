@@ -19,7 +19,7 @@ public class endingScript : MonoBehaviour
     void Start()
     {
         soundEffect = GameObject.FindObjectOfType<SoundEffect_Manager>();
-        StartCoroutine(Typing("È²±İÆ÷µµ¸¦ ¼Õ¿¡ ³Ö¾ú´Ù.", 0.05f));
+        StartCoroutine(Typing("í™©ê¸ˆí¬ë„ë¥¼ ì†ì— ë„£ì—ˆë‹¤.", 0.05f));
     }
 
     // Update is called once per frame
@@ -29,16 +29,16 @@ public class endingScript : MonoBehaviour
         {
             if (clickCount == 0)
             {
-                //text.text = "Æ÷µµ¸¦ ¸Ô°í °ğ¹Ù·Î ±â¾ïÀ» µÇÃ£´Â °ÍÀº ¾Æ´Ï¾úÀ¸´Ï,\n¾Æ¸¶ ¸çÄ¥Àº ±â´Ù·Á¾ß ÇÒ ÅÍ¿´´Ù.";
-                StartCoroutine(Typing("Æ÷µµ¸¦ ¸Ô°í °ğ¹Ù·Î ±â¾ïÀ» µÇÃ£´Â °ÍÀº ¾Æ´Ï¾úÀ¸´Ï,\n ¾Æ¸¶ ¸çÄ¥Àº ±â´Ù·Á¾ß ÇÒ ÅÍ¿´´Ù.",0.05f));
+                //text.text = "í¬ë„ë¥¼ ë¨¹ê³  ê³§ë°”ë¡œ ê¸°ì–µì„ ë˜ì°¾ëŠ” ê²ƒì€ ì•„ë‹ˆì—ˆìœ¼ë‹ˆ,\nì•„ë§ˆ ë©°ì¹ ì€ ê¸°ë‹¤ë ¤ì•¼ í•  í„°ì˜€ë‹¤.";
+                StartCoroutine(Typing("í¬ë„ë¥¼ ë¨¹ê³  ê³§ë°”ë¡œ ê¸°ì–µì„ ë˜ì°¾ëŠ” ê²ƒì€ ì•„ë‹ˆì—ˆìœ¼ë‹ˆ,\n ì•„ë§ˆ ë©°ì¹ ì€ ê¸°ë‹¤ë ¤ì•¼ í•  í„°ì˜€ë‹¤.",0.05f));
                 clickCount++; //1
                 
             }
 
             else if (clickCount == 1)
             {
-                //text.text = "±×¸®°í »¡°£ ¸ÁÅä´Â... ";
-                StartCoroutine(Typing("±×¸®°í »¡°£ ¸ÁÅä´Â... ", 0.05f));
+                //text.text = "ê·¸ë¦¬ê³  ë¹¨ê°„ ë§í† ëŠ”... ";
+                StartCoroutine(Typing("ê·¸ë¦¬ê³  ë¹¨ê°„ ë§í† ëŠ”... ", 0.05f));
                 clickCount++; //2
                 
 
@@ -46,16 +46,16 @@ public class endingScript : MonoBehaviour
             else if (clickCount == 2)
             {
 
-                //text.text = "ÇÑÂüÀÌ³ª ´Á´ëÀÇ »çÃ¼¸¦ ³ë·Áº¸´Ù, ÀÌ³» ÀÚ±â°¡ Ã³¸®ÇÏ°Ô ÇØ´Ş¶ó°í ¿ä±¸Çß´Ù.";
-                StartCoroutine(Typing("ÇÑÂüÀÌ³ª ´Á´ëÀÇ »çÃ¼¸¦ ³ë·Áº¸´Ù, ÀÌ³» ÀÚ±â°¡ Ã³¸®ÇÏ°Ô ÇØ´Ş¶ó°í ¿ä±¸Çß´Ù.", 0.05f));
+                //text.text = "í•œì°¸ì´ë‚˜ ëŠ‘ëŒ€ì˜ ì‚¬ì²´ë¥¼ ë…¸ë ¤ë³´ë‹¤, ì´ë‚´ ìê¸°ê°€ ì²˜ë¦¬í•˜ê²Œ í•´ë‹¬ë¼ê³  ìš”êµ¬í–ˆë‹¤.";
+                StartCoroutine(Typing("í•œì°¸ì´ë‚˜ ëŠ‘ëŒ€ì˜ ì‚¬ì²´ë¥¼ ë…¸ë ¤ë³´ë‹¤, ì´ë‚´ ìê¸°ê°€ ì²˜ë¦¬í•˜ê²Œ í•´ë‹¬ë¼ê³  ìš”êµ¬í–ˆë‹¤.", 0.05f));
                 clickCount++; //2
                
 
             }
             else if (clickCount == 3)
             {
-                //text.text = "ÀÌ ÂÊ ¸ñÀûÀº ´Ş¼ºÇßÀ¸´Ï ½Â³«Çß´Ù. ¾Æ¹«·¡µµ »ó°ü ¾ø¾ú´Ù.";
-                StartCoroutine(Typing("ÀÌ ÂÊ ¸ñÀûÀº ´Ş¼ºÇßÀ¸´Ï ½Â³«Çß´Ù. ¾Æ¹«·¡µµ »ó°ü ¾ø¾ú´Ù.", 0.05f));
+                //text.text = "ì´ ìª½ ëª©ì ì€ ë‹¬ì„±í–ˆìœ¼ë‹ˆ ìŠ¹ë‚™í–ˆë‹¤. ì•„ë¬´ë˜ë„ ìƒê´€ ì—†ì—ˆë‹¤.";
+                StartCoroutine(Typing("ì´ ìª½ ëª©ì ì€ ë‹¬ì„±í–ˆìœ¼ë‹ˆ ìŠ¹ë‚™í–ˆë‹¤. ì•„ë¬´ë˜ë„ ìƒê´€ ì—†ì—ˆë‹¤.", 0.05f));
                 clickCount++; //2
                
 
@@ -63,8 +63,8 @@ public class endingScript : MonoBehaviour
             else if (clickCount == 4)
             {
 
-                //text.text = "´çºĞ°£ Á¦ ÀÏ»ó¿¡ Å« º¯È­´Â ¾øÀ» °ÍÀÌ´Ù.";
-                StartCoroutine(Typing("´çºĞ°£ Á¦ ÀÏ»ó¿¡ Å« º¯È­´Â ¾øÀ» °ÍÀÌ´Ù.", 0.05f));
+                //text.text = "ë‹¹ë¶„ê°„ ì œ ì¼ìƒì— í° ë³€í™”ëŠ” ì—†ì„ ê²ƒì´ë‹¤.";
+                StartCoroutine(Typing("ë‹¹ë¶„ê°„ ì œ ì¼ìƒì— í° ë³€í™”ëŠ” ì—†ì„ ê²ƒì´ë‹¤.", 0.05f));
                 clickCount++; //2
                 
 
@@ -72,8 +72,8 @@ public class endingScript : MonoBehaviour
             else if (clickCount == 5)
             {
 
-                //text.text = "¾Æ¸¶µµ.";
-                StartCoroutine(Typing("¾Æ¸¶µµ.", 0.05f));
+                //text.text = "ì•„ë§ˆë„.";
+                StartCoroutine(Typing("ì•„ë§ˆë„.", 0.05f));
                 clickCount++; //2
                
 
@@ -114,4 +114,3 @@ public class endingScript : MonoBehaviour
     }
 
 }
-

@@ -20,17 +20,6 @@ public class npcMovement : MonoBehaviour
         
     }
 
-    /* public void scene44(bool scene4)
-    {
-        if (scene4 == true)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target, 1f);
-        }
-        ttext.scene55(true);
-        
-    } */
-    //Graphic & Input Updates	
-
     public IEnumerator Scene44(bool scene4)
     {
         do
@@ -49,8 +38,6 @@ public class npcMovement : MonoBehaviour
 
             yield return new WaitForSeconds(0.5f);
         }
-
-        //Call2();
         ttext.Scene55(true);
 
 

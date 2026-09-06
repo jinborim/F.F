@@ -10,10 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator ani;
 
 
-
-
-    // Vector2 target = new Vector2(250, 88);
-
     void Start()
     {
         npc = GameObject.FindObjectOfType<npcMovement>();
@@ -25,16 +21,6 @@ public class PlayerMovement : MonoBehaviour
     {
         
     }
-
-    /* public void scene33(bool scene3)
-    {
-        if (scene3 == true)
-        {
-            
-        }
-        
-        
-    }*/
 
     public IEnumerator Scene33(bool scene3)
     {
@@ -51,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
 
         Call1();
 
-
     }
 
     public void Call1()
@@ -59,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
       
         StartCoroutine(npc.Scene44(true));
     }
-    //Graphic & Input Updates	
 
 
 }

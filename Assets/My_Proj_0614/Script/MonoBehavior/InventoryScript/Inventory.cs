@@ -5,17 +5,17 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public static GameObject INVENTORY;
-    public static bool invectoryActivated = false;  // ÀÎº¥Åä¸® È°¼ºÈ­ ¿©ºÎ. true°¡ µÇ¸é Ä«¸Ş¶ó ¿òÁ÷ÀÓ°ú ´Ù¸¥ ÀÔ·ÂÀ» ¸·À» °ÍÀÌ´Ù.
+    public static bool invectoryActivated = false;  // ì¸ë²¤í† ë¦¬ í™œì„±í™” ì—¬ë¶€. trueê°€ ë˜ë©´ ì¹´ë©”ë¼ ì›€ì§ì„ê³¼ ë‹¤ë¥¸ ì…ë ¥ì„ ë§‰ì„ ê²ƒì´ë‹¤.
 
     [SerializeField]
-    private GameObject go_InventoryBase; // Inventory_Base ÀÌ¹ÌÁö
+    private GameObject go_InventoryBase; // Inventory_Base ì´ë¯¸ì§€
     [SerializeField]
-    private GameObject go_SlotsParent;  // SlotµéÀÇ ºÎ¸ğÀÎ Grid Setting 
+    private GameObject go_SlotsParent;  // Slotë“¤ì˜ ë¶€ëª¨ì¸ Grid Setting 
     [SerializeField]
     public GameObject Top_SlotsParent;
 
 
-    private Slot[] slots;  // ½½·Ôµé ¹è¿­
+    private Slot[] slots;  // ìŠ¬ë¡¯ë“¤ ë°°ì—´
     private TopSlot[] slot_top;
 
     private void Awake()
@@ -68,17 +68,17 @@ public class Inventory : MonoBehaviour
         go_InventoryBase.SetActive(false);
     }
 
-    public void AcquireItem(Item _item, GunType_selected _gun, int _count = 1) //¹«±â°¡ ¾Æ´Ñ °æ¿ì °³¼ö¸¦ ¼¼ÁÜ..
+    public void AcquireItem(Item _item, GunType_selected _gun, int _count = 1) //ë¬´ê¸°ê°€ ì•„ë‹Œ ê²½ìš° ê°œìˆ˜ë¥¼ ì„¸ì¤Œ..
     {
         if (Item.ItemType.Equipment != _item.itemType)
         {
             for (int i = 0; i < slots.Length; i++)
             {
-                if (slots[i].item != null)  // null ÀÌ¶ó¸é slots[i].item.itemName ÇÒ ¶§ ·±Å¸ÀÓ ¿¡·¯ ³ª¼­
+                if (slots[i].item != null)  // null ì´ë¼ë©´ slots[i].item.itemName í•  ë•Œ ëŸ°íƒ€ì„ ì—ëŸ¬ ë‚˜ì„œ
                 {
-                    if (slots[i].item.itemName == _item.itemName) // ¸ğµç ½½·ÔÀ» °Ë»çÇØ¼­ ¾î¶² ½½·Ô¿¡ »õ ¾ÆÀÌÅÛ°ú °°Àº Á¾·ùÀÇ ¾ÆÀÌÅÛÀÌ ÀÖÀ»¶§..
+                    if (slots[i].item.itemName == _item.itemName) // ëª¨ë“  ìŠ¬ë¡¯ì„ ê²€ì‚¬í•´ì„œ ì–´ë–¤ ìŠ¬ë¡¯ì— ìƒˆ ì•„ì´í…œê³¼ ê°™ì€ ì¢…ë¥˜ì˜ ì•„ì´í…œì´ ìˆì„ë•Œ..
                     {
-                        slots[i].SetSlotCount(_count); //ÇöÀç _count=1ÀÌ¹Ç·Î slotÀÇ SetSlotCount¿¡¼­ ¾ÆÀÌÅÛ Ä«¿îÆ®¸¦ 1¸¸Å­ »õ·Î ¿Ã·ÁÁÜ
+                        slots[i].SetSlotCount(_count); //í˜„ì¬ _count=1ì´ë¯€ë¡œ slotì˜ SetSlotCountì—ì„œ ì•„ì´í…œ ì¹´ìš´íŠ¸ë¥¼ 1ë§Œí¼ ìƒˆë¡œ ì˜¬ë ¤ì¤Œ
                         return;
                     }
                 }
@@ -89,9 +89,9 @@ public class Inventory : MonoBehaviour
         {
             for (int i = 0; i < slots.Length; i++)
             {
-                if (slots[i].item == null)//¾ÕÀÇ ½½·ÔºÎÅÍ Â÷·Ê·Î °Ë»çÇØ¼­ ºó ½½·ÔÀÌ ÀÖÀ» ¶§
+                if (slots[i].item == null)//ì•ì˜ ìŠ¬ë¡¯ë¶€í„° ì°¨ë¡€ë¡œ ê²€ì‚¬í•´ì„œ ë¹ˆ ìŠ¬ë¡¯ì´ ìˆì„ ë•Œ
                 {
-                    slots[i].AddItem(_item, _count); // ÇØ´ç ½½·Ô¿¡ ¾ÆÀÌÅÛÀ» ³Ö¾îÁÜ
+                    slots[i].AddItem(_item, _count); // í•´ë‹¹ ìŠ¬ë¡¯ì— ì•„ì´í…œì„ ë„£ì–´ì¤Œ
                     return;
                 }
             }
@@ -100,15 +100,12 @@ public class Inventory : MonoBehaviour
         {
             for (int i = 0; i < slot_top.Length; i++)
             {
-                if (slot_top[i].item == null)//¾ÕÀÇ ½½·ÔºÎÅÍ Â÷·Ê·Î °Ë»çÇØ¼­ ºó ½½·ÔÀÌ ÀÖÀ» ¶§
+                if (slot_top[i].item == null)//ì•ì˜ ìŠ¬ë¡¯ë¶€í„° ì°¨ë¡€ë¡œ ê²€ì‚¬í•´ì„œ ë¹ˆ ìŠ¬ë¡¯ì´ ìˆì„ ë•Œ
                 {
-                    slot_top[i].AddItem(_item, _gun, _count); // ÇØ´ç ½½·Ô¿¡ ¾ÆÀÌÅÛÀ» ³Ö¾îÁÜ(ÃÑ±â·ù¸¸ À§·Î)
+                    slot_top[i].AddItem(_item, _gun, _count); // í•´ë‹¹ ìŠ¬ë¡¯ì— ì•„ì´í…œì„ ë„£ì–´ì¤Œ(ì´ê¸°ë¥˜ë§Œ ìœ„ë¡œ)
                     return;
                 }
             }
-            
-
         }
-
     }
 }
