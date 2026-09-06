@@ -758,7 +758,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 153570948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28435506d7a884949a9f4c5d746cc1b6, type: 3}
+  m_Script: {fileID: 11500000, guid: a80195fb0a92a26488be9895179cc40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialog_: {fileID: 0}
@@ -803,7 +803,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 153570948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdfc2ee927d3e114088e2f35e48df03d, type: 3}
+  m_Script: {fileID: 11500000, guid: f524b4f89c2bcc843a4a941e6f2341a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: boss
@@ -3304,7 +3304,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 584623040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0699ff0b575d0ad4ea3702805fec52f7, type: 3}
+  m_Script: {fileID: 11500000, guid: e4cc3c96a61adb044aef972d7d7c02be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
@@ -3395,7 +3395,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 599002615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d7b1792b50360479a030176e92f573, type: 3}
+  m_Script: {fileID: 11500000, guid: 8082b435a2c88ca4c9e9398656065fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   keyCodes: 310000003200000033000000340000003500000036000000370000003800000039000000
@@ -3423,7 +3423,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 599002615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95923f1fc2c92dc40adb762a9afa5665, type: 3}
+  m_Script: {fileID: 11500000, guid: 061f51f7a8dba0247b35d4f4ab5d601d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gunventory: {fileID: 0}
@@ -3437,7 +3437,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 599002615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c0898ced6ff08442b55fd2909f57f90, type: 3}
+  m_Script: {fileID: 11500000, guid: c03651a983763a74dabc1ceecd55aa8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: stage2
@@ -3957,7 +3957,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 693890112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c710947167b6d4884aa27f2bbb3bce, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cb162985153b434782e04443494a60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Xpoint: 6
@@ -5172,7 +5172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 838424131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0699ff0b575d0ad4ea3702805fec52f7, type: 3}
+  m_Script: {fileID: 11500000, guid: e4cc3c96a61adb044aef972d7d7c02be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
@@ -9018,7 +9018,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1083523100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0699ff0b575d0ad4ea3702805fec52f7, type: 3}
+  m_Script: {fileID: 11500000, guid: e4cc3c96a61adb044aef972d7d7c02be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
@@ -10317,7 +10317,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1333406959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0699ff0b575d0ad4ea3702805fec52f7, type: 3}
+  m_Script: {fileID: 11500000, guid: e4cc3c96a61adb044aef972d7d7c02be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
@@ -68085,7 +68085,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1629882892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0699ff0b575d0ad4ea3702805fec52f7, type: 3}
+  m_Script: {fileID: 11500000, guid: e4cc3c96a61adb044aef972d7d7c02be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3

@@ -366,7 +366,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 158173079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c710947167b6d4884aa27f2bbb3bce, type: 3}
+  m_Script: {fileID: 11500000, guid: d8676d1c2578d7a40ac794717e50bcc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Xpoint: 4
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d17fdcd9fb6cf142b9bffc58a7afddb, type: 3}
+  m_Script: {fileID: 11500000, guid: f183270824352154a9d0b6918edcef69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
@@ -985,7 +985,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 599002615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d7b1792b50360479a030176e92f573, type: 3}
+  m_Script: {fileID: 11500000, guid: ca4fa3c979e890a4aae271fab9cf7c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   keyCodes: 310000003200000033000000340000003500000036000000370000003800000039000000
@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 599002615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95923f1fc2c92dc40adb762a9afa5665, type: 3}
+  m_Script: {fileID: 11500000, guid: a7f9d85da2d7b4d4086390f9dc1726ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gunventory: {fileID: 0}
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 599002615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c0898ced6ff08442b55fd2909f57f90, type: 3}
+  m_Script: {fileID: 11500000, guid: 07f5b539c4cf0a947b23d4888beb000e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: boss
