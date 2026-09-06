@@ -1,7 +1,5 @@
 플레이 영상 https://www.youtube.com/watch?v=SZ4O9bAiLio
 
-F.F 폴더 https://github.com/jinborim/F.F
-
 시스템 구조
 1. Inventroy System
 - 아이템 획득 및 슬롯 관리
